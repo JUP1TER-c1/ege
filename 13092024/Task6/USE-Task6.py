@@ -1,4 +1,4 @@
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt #На ЕГЭ, я так понимаю, не будет этой библиотеки?
 import math
 import numpy as np
 
