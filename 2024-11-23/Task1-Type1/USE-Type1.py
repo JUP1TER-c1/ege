@@ -1,7 +1,7 @@
 from itertools import permutations
 
-graph_literal_roads   = "AB AC BA BD CA CE CG DB DF DG EC EF FD FE FG GC GD GF"
-sheet_numerical_roads = "14 15 17 24 26 35 36 37 41 42 51 53 56 62 63 65 71 73"
+graph_literal_roads   = "АБ АГ БА БВ ВБ ВГ ВЕ ГА ГВ ГД ГЖ ДГ ДЕ ЕВ ЕД ЕЖ ЕК ЖГ ЖЕ ЖИ ИЖ ЖК КЕ КИ"
+sheet_numerical_roads = "12 14 15 19 21 26 34 35 37 39 41 43 48 51 53 56 62 65 73 78 84 87 91 93"
 
 unique_endpoints = set(graph_literal_roads.replace(' ', ''))
 for permutation in permutations(unique_endpoints):
