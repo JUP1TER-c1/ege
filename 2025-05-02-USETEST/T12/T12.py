@@ -10,7 +10,7 @@ def redactor(line):
 
 
 for n in range(3, 10001):
-    res = redactor('3' + ('1' * n))
+    res = redactor('5' + ('1' * n))
     if sum(int(d) for d in res) == 15:
         print(n)
         break
