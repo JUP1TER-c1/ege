@@ -12,7 +12,7 @@ for a in al:
         if '112' in a:
             a = a.replace('112','6',1)
         else:
-            a = a.replace('11','3',1)
+            a = a.replace('11','5',1)
     for k in a:
         c = c + int(k)
     if c > maxx:

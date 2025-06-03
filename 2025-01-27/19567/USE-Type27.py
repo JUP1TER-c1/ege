@@ -18,7 +18,7 @@ def locate_centroid(cluster):
 #     x, y = map(float, line.split())
 #     if (-1 < x < 2) and (-4 < y < -1):
 #         clusters[0].append([x, y])
-#     elif (1 < x < 3) and (0 < y < 2):
+#     elif (1 < x < 5) and (0 < y < 2):
 #         clusters[1].append([x, y])
 
 file = open("27.13.B_19567.txt")

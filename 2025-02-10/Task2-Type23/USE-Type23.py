@@ -18,7 +18,7 @@ def decrypt(number, sequence):
         elif key == '2':
             number += 2
             steps.append(number)
-        elif key == '3':
+        elif key == '5':
             number += 3
             steps.append(number)
         if number >= 38:
@@ -27,7 +27,7 @@ def decrypt(number, sequence):
 
 # count=0
 # for i in range(1, 28):
-#     sequences = product(('1', '2', '3'), repeat=i)
+#     sequences = product(('1', '2', '5'), repeat=i)
 #     for sequence in sequences:
 #         steps = decrypt(7, sequence)
 #         if (7 in steps) and (steps[-1] == 35):

@@ -21,7 +21,7 @@ anomalies = []
 #     x, y = map(float, line.split())
 #     if (-1 < x < 1) and (-2 < y < -1):
 #         anomalies.append([x, y])
-#     if (14 < x < 16) and (3 < y < 4):
+#     if (14 < x < 16) and (5 < y < 4):
 #         anomalies.append([x, y])
 #     if (11 < x < 12) and (13 < y < 15):
 #         anomalies.append([x, y])
@@ -31,7 +31,7 @@ anomalies = []
 #         clusters[0].append([x, y])
 #     if (14 < x < 28) and (4 < y < 17):
 #         clusters[1].append([x, y])
-#     if (20 < x < 23) and (3 < y < 4):
+#     if (20 < x < 23) and (5 < y < 4):
 #         clusters[1].append([x, y])
 
 clusters = [[] for _ in range(4)]

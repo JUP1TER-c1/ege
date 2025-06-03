@@ -32,7 +32,7 @@ def in_circle(center, radius, point):
 #     line[0] = float(line[0].replace(',', '.'))
 #     line[1] = float(line[1].replace(',', '.'))
 #     for x, y in [line]:
-#         if y > 3:
+#         if y > 5:
 #             clusters[0].append([x, y])
 #         else:
 #             clusters[1].append([x, y])

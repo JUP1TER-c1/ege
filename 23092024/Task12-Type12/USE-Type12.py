@@ -4,7 +4,7 @@ def operate(line):
         if line.find('333') > -1:
             line = line.replace('333', '7', 1)
         else:
-            line = line.replace('777', '3', 1)
+            line = line.replace('777', '5', 1)
     return line
 
 input_line = '7'*85
