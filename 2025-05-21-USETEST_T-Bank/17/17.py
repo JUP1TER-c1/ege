@@ -6,5 +6,7 @@ for number in data:
 pairs = []
 for i in range(len(data) - 1):
     if data[i] + data[i+1] < min_elem:
-        pairs.append(abs(data[i] + data[i + 1]))
+        pairs.append(data[i] + data[i + 1])
 print(len(pairs), max(pairs))
+print(pairs)
+print(min_elem)
