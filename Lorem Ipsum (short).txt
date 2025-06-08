@@ -1,0 +1,1301 @@
+#///////////////--1--///////////////
+#from itertools import permutations
+#
+#sheet = "21 42 43 53 61 63 72 74 75"
+#sheet = sheet + " " + sheet[::-1]
+#graph = "BG BD GF GC DE FC FE CA EA"
+#graph = graph + " " + graph[::-1]
+#
+#unique_endpoints = set(graph.replace(" ", ""))
+#for permutation in permutations(unique_endpoints):
+#    cache = sheet
+#    for index, point in enumerate(permutation):
+#        cache = cache.replace(str(index + 1), point)
+#    if set(cache.split()) == set(graph.split()):
+#        print(permutation)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--2--///////////////
+#from itertools import permutations, product
+#
+#def F(x, y, w, z):
+#    return (w <= (not (x <= z))) or y
+#
+#for a1, a2, a3, a4, a5, a6, a7 in product([0, 1], repeat=7):
+#    table = [(1, a1, a2, a3), (0, 1, 0, a4), (a5, 0, a6, a7)]
+#    for permutation in permutations("xywz"):
+#        if [F(**dict(zip(permutation, row))) for row in table] == [0, 0, 0]:
+#            print(permutation)
+# + print_true_table from infEGE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--3--///////////////
+#Чаще всего достаточно использовать ВПР
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--4--///////////////
+#Чтобы точно не ошибаться можно сделать в Excel-таблице дерево для всех значений
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--5--///////////////
+#Не забывать перепроверять что знак приписывается справа/слева если стоит такое условие
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--6--///////////////
+#Может пригодиться функция для движения по окружности под условие
+#def arc(r, a, b, alpha):
+#    seth(towards(xcor() + a, ycor() + b))
+#    right(90)
+#    circle(radius=r, extent=-alpha)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--7--///////////////
+#Функции из библиотеки math
+#Объем изображения: пиксели.вертикаль * пиксели.горизонталь * ceil(log2(кол-во цветов))
+#Объем звука: ceil(log2(кол-во уровней)) * частота * время * кол-во.каналов(моно=1, стерео=2, квадро=4)
+#Объем текста: ceil(log2(кол-во символов в алфавите)) * кол-во.символов
+#Удобно решать в таблицах или питоне, чтобы ничего нигде не потерять.
+#Следить за единицей измерения числа (гбайт = 1024мбайт = 1024кбайт = 1024байт = 8бит)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--8--///////////////
+#!Внимательно следить за систематикой нумерации списка (начинается с еденицы/нуля)
+#!Внимательно следить за сортировкой букв по алфавиту
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--9--///////////////
+#Получить все повторяющиеся N раз числа в строке
+#rep_numbers = [number for number in row if row.count(number) == 3] # (здесь N = 3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--10--//////////////
+#Текст глав скопировать в отдельный документ. Результаты поиска ещё желательно проверить вручную глазами
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--11--//////////////
+#
+#
+#from math import *
+#for alph in range(2, 2048):
+#    symbol_bit = ceil(log2(alph))
+#    tag_byte = ceil((symbol_bit*248)/8)
+#    tags_byte = tag_byte * 75600
+#    if tags_byte > 16*1024*1024:
+#        print(alph)
+#        break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--12--//////////////
+#-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--13--//////////////
+#ipaddress.ip_network('адрес/маска', False).hosts()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--14--//////////////
+#def baseXtoY(x, y):
+#    res = ''
+#    while x > 0:
+#        res = str(x % y) + res
+#        x //= y
+#    return res
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--15--//////////////
+#-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--16--//////////////
+#@lru_cache(None) or @cache from infEGE
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--17--//////////////
+#Условие мега-внимательно читать
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--18--//////////////
+#-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////19--21//////////////
+#
+#def game(pile, step):
+#    if pile >= 51: return step % 2 == 0
+#    if step == 0: return 0
+#    moves = [game(pile + 1, step - 1), game(pile + 4, step - 1), game(pile * 2, step - 1)]
+#    return any(moves) if step % 2 == 1 else all(moves)
+#
+#def game(pile1, pile2, move):
+#    if pile1 + pile2 >= 231: return move % 2 == 0
+#    if move == 0: return 0
+#    states = [game(pile1 + 1, pile2, move - 1), game(pile1 * 2, pile2, move - 1), game(pile1, pile2 + 1, move - 1), game(pile1, pile2 * 2, move - 1)]
+#    return any(states) if move % 2 == 1 else any(states)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--22--//////////////
+#-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--23--//////////////
+#Автокод-пример для перевода 38 в 2, при том что 16 содержится в траектории:
+#def ex(start, end):
+#    if start < end: return 0
+#    if start == end: return 1
+#    return ex(start - 2, end) + ex(start // 2, end) # следующие шаги программы
+#
+#print(ex(38, 16) * ex(16, 2))
+#
+#Автокод-пример 2 для перевода 38 в 2, при том что 16 содержится в траектории, а 4 не содержится:
+#def ex(start, end):
+#    if start < end or start == 4: return 0
+#    if start == end: return 1
+#    return ex(start - 2, end) + ex(start // 2, end) # следующие шаги программы
+#
+#print(ex(38, 16) * ex(16, 2))
+#                ^^^
+#важно что внутри исполнителя следующие шаги складываются, а варианты при разделении для указания числа в траектории умножаются
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--24--//////////////
+#Пример решения заменой:
+#seq = open('24.txt').readline()
+#seq = seq.replace('*', '+')
+#seq = seq.replace('-', '+')
+#seq = seq.replace('+0+', '+5+')
+#banned_combs = ['++', '+0', '+|', '|+', '|0', '||']
+#flag = any([(comb in seq) for comb in banned_combs])
+#while flag:
+#    for comb in banned_combs:
+#        seq = seq.replace(comb, '|')
+#    flag = any([(comb in seq) for comb in banned_combs])
+#
+#print(seq)
+#equations = seq.split('|')
+#maxlen = max(equations, key=len) # <- полезно знать что у функции max есть параметр key, в котором можно указать имя функции по которой будут сравниваться элементы списка
+#print(maxlen, len(maxlen))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--25--////////////// \ ///////////////--26--//////////////
+#да поможе вам бох (и библиотека infEGE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#///////////////--27--//////////////
+## Функция расстояния:
+#def distance(p1, p2):
+#    return ((p2[0] - p1[0])**2 + (p2[1] - p1[1])**2)**0.5
+## Функция поиска центроида:
+#def loc_cntr(cluster):
+#    centroid = []
+#    min_dist_sum = 10**40
+#    for candidate in cluster:
+#        dist_sum = sum([distance(candidate, point) for point in cluster])
+#        if dist_sum <= min_dist_sum:
+#            centroid = candidate
+#            min_dist_sum = dist_sum
+#    return centroid
+#
+## Функция сравнения точки с прямой, заданной двумя точками. 1 значит над прямой, -1 значит под ней
+## x-x1/x2-x1 = y-y1/y2-y1
+## 1 means above, -1 is below (left/right)
+#def compare_point_to_line(point, deter1, deter2):
+#    if (point[0] - deter1[0]) / (deter2[0] - deter1[0]) < (point[1] - deter1[1]) / (deter2[1] - deter1[1]):
+#        return 1
+#    elif (point[0] - deter1[0]) / (deter2[0] - deter1[0]) > (point[1] - deter1[1]) / (deter2[1] - deter1[1]):
+#        return -1
+#
+## Функция сравнения точки с окружностью, 1 значит внутри, -1 значит снаружи
+## 1 means inside, -1 is the opposite
+#def compare_point_to_circle(point, center, radius):
+#    if (point[0] - center[0])**2 + (point[1] - center[1])**2 < radius**2:
+#        return 1
+#    else:
+#        return -1
+#
+## Алгоритм вывода среднего по абсциссе и ординате
+#centroids = [loc_cntr(cluster) for cluster in clusters]
+#centrox = [centroid[0] for centroid in centroids]
+#centroy = [centroid[1] for centroid in centroids]
+#print(abs((sum(centrox)/len(centrox))*10000)) # !Важно почитать в условии, нужно ли использовать абсолютное значение
+#print(abs((sum(centroy)/len(centroy))*10000))
